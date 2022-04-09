@@ -75,15 +75,15 @@ public class Login_Page extends AppCompatActivity {
 //            }
 //        });
 
-//        signup.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                //Redirects the user to the registration Page
-//                Intent i = new Intent(Login_page.this,registration_page.class);
-//                startActivity(i);
-//                finish();
-//            }
-//        });
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Redirects the user to the registration Page
+                Intent i = new Intent(Login_Page.this,Registration_Page.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override

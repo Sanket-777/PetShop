@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration_Page">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#0099ff"/>
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="Don't have an account?"
+                    android:textSize="30dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/font9"
+                    android:layout_gravity="center_vertical|left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"/>
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:src="@drawable/ic_baseline_person_24"
+                    app:tint="@color/white"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"/>
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/ic_wave"
+                    android:layout_gravity="end"/>
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="40dp">
+
+            <EditText
+                android:id="@+id/Username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/custome_input"
+                android:drawableStart="@drawable/ic_name"
+                android:drawableTint="#0099ff"
+                android:drawablePadding="12dp"
+                android:hint="Name"
+                android:padding="15dp" />
+
+            <EditText
+                android:id="@+id/Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/custome_input"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="12dp"
+                android:drawableTint="#0099ff"
+                android:hint="Email"
+                android:padding="15dp" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/custome_input"
+                android:drawableStart="@drawable/ic_password"
+                android:drawablePadding="12dp"
+                android:inputType="textPassword"
+                android:hint="Password"
+                android:drawableTint="#0099ff"
+                android:padding="15dp" />
+
+            <EditText
+                android:id="@+id/conf_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/custome_input"
+                android:drawableStart="@drawable/ic_password"
+                android:drawablePadding="12dp"
+                android:inputType="textPassword"
+                android:hint="Confirm Password"
+                android:drawableTint="#0099ff"
+                android:padding="15dp" />
+
+            <Button
+                android:id="@+id/nextbtn"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20sp"
+                android:backgroundTint="#0099ff"
+                android:fontFamily="@font/font9"
+                android:text="Sign up"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

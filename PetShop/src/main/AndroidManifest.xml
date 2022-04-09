@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetShop">
         <activity
+            android:name=".Registration_Page"
+            android:exported="false" />
+        <activity
             android:name=".Splash_Screen"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,9 +26,7 @@
             android:exported="false" />
         <activity
             android:name=".Login_Page"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
