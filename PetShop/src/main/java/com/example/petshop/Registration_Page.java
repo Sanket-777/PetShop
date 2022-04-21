@@ -81,10 +81,6 @@ public class Registration_Page extends AppCompatActivity {
         }
 
         Name = uname.getText().toString();
-        SharedPreferences mySharedPreferences = this.getSharedPreferences("MYPREFERENCENAME", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = mySharedPreferences.edit();
-        editor.putString("USERNAME",Name);
-        editor.apply();
         s_email = email.getText().toString();
         Password = pass.getText().toString();
         Confirm_pass = conf_pass.getText().toString();
@@ -96,7 +92,6 @@ public class Registration_Page extends AppCompatActivity {
 
                             fStore = FirebaseFirestore.getInstance();
                             userId = mAuth.getCurrentUser().getUid();
-                            DocumentReference documentReference = fStore.collection("users").document(userId);
 
                             Map<String,Object> user = new HashMap<>();
                             user.put("fullName", Name);
@@ -106,7 +101,7 @@ public class Registration_Page extends AppCompatActivity {
                             startActivity(i);
                             finish();
 
-                            documentReference.collection("users").document("Info").set(user);
+                            Task<Void> documentReference = fStore.collection("UsersData").document(userId).set(user);
                             FirebaseUser fUser = mAuth.getCurrentUser();
                             fUser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
