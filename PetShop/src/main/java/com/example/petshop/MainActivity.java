@@ -15,7 +15,7 @@ import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 
 public class MainActivity extends AppCompatActivity {
-    Button logout;
+    Button logout,add_pet;
     FirebaseAuth mAuth;
     FirebaseFirestore fStore;
     SliderView sliderView;
@@ -29,8 +29,16 @@ public class MainActivity extends AppCompatActivity {
         mAuth=FirebaseAuth.getInstance();
         fStore=FirebaseFirestore.getInstance();
 
+        add_pet = findViewById(R.id.add_pet);
 
         logout = findViewById(R.id.logout_button);
+
+        add_pet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Adding New Pet Details", Toast.LENGTH_SHORT).show();
+            }
+        });
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
+
 
         //for the image slider
         sliderView=findViewById(R.id.Image_Slider);
