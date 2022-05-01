@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/actionBarSize"
+    android:background="#0099ff"
+    local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    local:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="30sp"
+        android:drawableTint="#0099ff"
+        android:text="PETSHOP"
+        android:textColor="#000"
+        android:gravity="center"
+        android:fontFamily="@font/font10"
+        android:layout_height="wrap_content" />
+</androidx.appcompat.widget.Toolbar>

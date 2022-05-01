@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/myparentLayout"
+    android:layout_height="match_parent"
+    tools:context="Profile">
+
+    <RelativeLayout
+        android:id="@+id/childLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#65E1F1"
+        android:paddingTop="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/profile"
+            tools:ignore="MissingClass" />
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_image"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="Name"
+            android:textColor="@color/colorBlack"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/linearLayout1"
+        android:layout_below="@id/childLayout"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:layout_height="60dp"
+            android:background="#63B8FB"
+            android:text="Petcare"
+            android:id="@+id/btnPetCare"
+            android:textSize="22sp"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"/>
+
+        <Button
+            android:layout_height="60dp"
+            android:textSize="22sp"
+            android:id="@+id/btn_addprofile"
+            android:background="#81ECDC"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:text="Add Profile"
+            android:layout_width="match_parent"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:id="@+id/linearLayout2"
+        android:layout_below="@id/linearLayout1"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Mobile :"
+            android:textSize="24sp"
+            android:textColor="#3786AA"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/txt_mobile"
+            android:textSize="20sp"
+            android:text="7304743430"
+            android:layout_marginTop="10dp"
+            android:textColor="#040303"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Email :"
+            android:textSize="24sp"
+            android:layout_marginTop="20dp"
+            android:textColor="#3786AA"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:text="email@gmail.com"
+            android:layout_marginTop="10dp"
+            android:inputType="phone"
+            android:id="@+id/txt_email"
+            android:textColor="#040303"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/linearLayout2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/skyblue_bg"
+        android:elevation="8dp"
+        android:text="Logout"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:translationZ="8dp" />
+
+
+</RelativeLayout>
