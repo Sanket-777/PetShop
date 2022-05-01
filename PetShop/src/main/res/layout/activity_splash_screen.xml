@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Splash_Screen"
-    android:orientation="vertical"
-    >
+    android:background="@color/white"
 
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen">
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:src="@drawable/splash1" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="221dp"
-        android:layout_height="109dp"
-        android:layout_gravity="center"
-        android:layout_marginVertical="100dp"
-        android:fontFamily="@font/font5"
-        android:text="Online PetShop"
-        android:textColor="@color/black"
-        android:textSize="35sp" />
-</LinearLayout>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/home"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="199dp"
+        android:gravity="center"
+        android:text="Welcome To PetShop"
+        android:textColor="#9800"
+        android:textSize="34sp" />
+
+</RelativeLayout>

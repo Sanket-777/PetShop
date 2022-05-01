@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Registration_Page">
-
+    android:background="#FAFDFD"
+    tools:context=".Registration">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -53,27 +53,43 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="460dp"
             android:layout_gravity="center"
-            android:orientation="vertical"
             android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
             android:layout_marginRight="30dp"
-            android:layout_marginTop="40dp">
+            android:orientation="vertical">
 
             <EditText
-                android:id="@+id/Username"
+                android:id="@+id/edt_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:background="@drawable/custome_input"
                 android:drawableStart="@drawable/ic_name"
-                android:drawableTint="#0099ff"
                 android:drawablePadding="12dp"
+                android:drawableTint="#0099ff"
                 android:hint="Name"
+                android:textColor="@color/Black"
+                android:textColorHint="#504E4E"
                 android:padding="15dp" />
 
             <EditText
-                android:id="@+id/Email"
+                android:id="@+id/edt_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/custome_input"
+                android:drawableStart="@drawable/phone"
+                android:drawablePadding="12dp"
+                android:drawableTint="#0099ff"
+                android:hint="Phone Number"
+                android:textColor="@color/Black"
+                android:textColorHint="#504E4E"
+                android:padding="15dp" />
+
+            <EditText
+                android:id="@+id/edt_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
@@ -82,44 +98,50 @@
                 android:drawablePadding="12dp"
                 android:drawableTint="#0099ff"
                 android:hint="Email"
+                android:textColor="@color/Black"
+                android:textColorHint="#504E4E"
                 android:padding="15dp" />
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/edt_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:background="@drawable/custome_input"
                 android:drawableStart="@drawable/ic_password"
                 android:drawablePadding="12dp"
-                android:inputType="textPassword"
+                android:drawableTint="#0099ff"
                 android:hint="Password"
-                android:drawableTint="#0099ff"
+                android:textColor="@color/Black"
+                android:textColorHint="#504E4E"
+                android:inputType="textPassword"
                 android:padding="15dp" />
 
             <EditText
-                android:id="@+id/conf_password"
+                android:id="@+id/edt_conformpassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:background="@drawable/custome_input"
                 android:drawableStart="@drawable/ic_password"
                 android:drawablePadding="12dp"
-                android:inputType="textPassword"
-                android:hint="Confirm Password"
                 android:drawableTint="#0099ff"
+                android:hint="Confirm Password"
+                android:textColor="@color/Black"
+                android:textColorHint="#504E4E"
+                android:inputType="textPassword"
                 android:padding="15dp" />
 
             <Button
-                android:id="@+id/nextbtn"
-                android:layout_width="100dp"
+                android:id="@+id/btn_register"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20sp"
-                android:backgroundTint="#0099ff"
+                android:background="@drawable/skyblue_bg"
                 android:fontFamily="@font/font9"
                 android:text="Sign up"
-                android:textColor="@color/black" />
+                android:textColor="@color/Black" />
         </LinearLayout>
     </FrameLayout>
 </LinearLayout>
