@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_course"
+            android:title="Course"
+            />
+        <item
+            android:id="@+id/nav_class"
+            android:title="Class" />
+        <item
+            android:id="@+id/nav_subject"
+            android:title="Subject" />
+        <item
+            android:id="@+id/nav_chapter"
+            android:title="Chapter" />
+        <item
+            android:id="@+id/nav_topic"
+            android:title="Topic" />
+        <item
+            android:id="@+id/nav_studymaterial"
+            android:title="Study Material" />
+        <item
+            android:id="@+id/nav_videos"
+            android:title="Videos" />
+        <item
+            android:id="@+id/nav_virtualclass"
+            android:title="Virtual ClassRoom"/>
+        <item
+            android:id="@+id/nav_batch"
+            android:title="Batch"/>
+        <item
+            android:id="@+id/nav_batchtime"
+            android:title="Batch Timetable"/>
+
+    </group>
+</menu>
