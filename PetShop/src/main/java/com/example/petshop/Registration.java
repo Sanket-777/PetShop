@@ -55,8 +55,8 @@ public class Registration extends AppCompatActivity {
         email = (EditText) findViewById(R.id.edt_email);
         name = (EditText) findViewById(R.id.edt_name);
         mobile = (EditText) findViewById(R.id.edt_mobile);
-        password = (EditText) findViewById(R.id.edt_password);
-        conformpassword = (EditText) findViewById(R.id.edt_conformpassword);
+        password = (EditText) findViewById(R.id.password);
+        conformpassword = (EditText) findViewById(R.id.conf_password);
 
         btnsignup = (Button) findViewById(R.id.btn_register);
 //        txtlogin = (TextView) findViewById(R.id.txt_login);

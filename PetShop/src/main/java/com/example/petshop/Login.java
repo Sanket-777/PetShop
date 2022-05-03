@@ -58,9 +58,9 @@ public class Login extends AppCompatActivity {
 
         showpassword = findViewById(R.id.show_password);
         mobile = (EditText) findViewById(R.id.edt_mobile);
-        password = (EditText) findViewById(R.id.edt_password);
-        btnlogin = (Button) findViewById(R.id.btn_login);
-        txtsignup = (TextView) findViewById(R.id.txtsignup);
+        password = (EditText) findViewById(R.id.password);
+        btnlogin = (Button) findViewById(R.id.login_button);
+        txtsignup = (TextView) findViewById(R.id.btn_register);
 
         txtsignup.setOnClickListener(new View.OnClickListener() {
             @Override

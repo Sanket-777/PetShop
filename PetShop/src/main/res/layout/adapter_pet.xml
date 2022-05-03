@@ -145,7 +145,7 @@
                     android:layout_marginLeft="5dp"
                     android:id="@+id/txtUserMobile"
                     android:textSize="16sp"
-                    android:textColor="@color/Black"/>
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 

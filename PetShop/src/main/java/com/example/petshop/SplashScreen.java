@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashScreen extends AppCompatActivity {
 
-    private static final long SPLASH_TIME_OUT = 1500;
+    private static final long SPLASH_TIME_OUT = 10000;
 
 
     @Override
@@ -31,6 +31,9 @@ public class SplashScreen extends AppCompatActivity {
                     startActivity(intent);
                 }
                 finish();
+//                Intent intent=new Intent(SplashScreen.this,MainActivity.class);
+//                startActivity(intent);
+//                finish();
 
             }
         },SPLASH_TIME_OUT);
@@ -41,6 +44,7 @@ public class SplashScreen extends AppCompatActivity {
         {
             Log.d("Exception",E.toString());
         }
+
     }
 
 }

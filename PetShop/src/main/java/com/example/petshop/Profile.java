@@ -39,7 +39,7 @@ public class Profile extends Fragment {
 
         preferences = new Preferences(getContext());
 
-        btnPetCare =  view.findViewById(R.id.btnPetCare);
+       // btnPetCare =  view.findViewById(R.id.btnPetCare);
         btnaddprofile = (Button) view.findViewById(R.id.btn_addprofile);
         btnLogout = (Button) view.findViewById(R.id.btnLogout);
         name = (TextView) view.findViewById(R.id.txt_name);

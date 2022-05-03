@@ -33,8 +33,8 @@
         android:layout_height="55dp"
         android:layout_alignParentBottom="true"
         app:itemBackground="@color/white"
-        app:itemIconTint="@color/nav_item_state_list"
-        app:itemTextColor="@color/nav_item_state_list"
+        app:itemIconTint="#006e7f"
+        app:itemTextColor="#069a8e"
         app:menu="@menu/bottom_navigation_menu">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>

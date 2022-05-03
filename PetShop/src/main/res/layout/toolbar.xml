@@ -5,17 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:minHeight="?attr/actionBarSize"
-    android:background="#0099ff"
+    android:background="#fff89a"
     local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
     local:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
 
     <TextView
         android:layout_width="match_parent"
         android:textSize="30sp"
-        android:drawableTint="#0099ff"
+        android:drawableTint="#f7f4e3"
         android:text="PETSHOP"
         android:textColor="#000"
         android:gravity="center"
-        android:fontFamily="@font/font10"
+        android:fontFamily="@font/font9"
+        android:textStyle="bold"
         android:layout_height="wrap_content" />
 </androidx.appcompat.widget.Toolbar>

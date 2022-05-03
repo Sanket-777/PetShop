@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:id="@+id/myparentLayout"
     android:layout_height="match_parent"
+    android:background="@color/bg_app"
     tools:context="Profile">
 
     <RelativeLayout
         android:id="@+id/childLayout"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="#65E1F1"
         android:paddingTop="20dp">
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -21,7 +21,7 @@
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
-            android:background="@drawable/profile"
+            android:background="@drawable/ic_profile"
             tools:ignore="MissingClass" />
 
         <TextView
@@ -34,7 +34,7 @@
             android:layout_marginTop="5dp"
             android:text="Name"
             android:textColor="@color/colorBlack"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
 
@@ -47,25 +47,23 @@
         android:layout_height="wrap_content">
 
 
-        <Button
-            android:layout_height="60dp"
-            android:background="#63B8FB"
-            android:text="Petcare"
-            android:id="@+id/btnPetCare"
-            android:textSize="22sp"
-            android:layout_weight="1"
-            android:textColor="@android:color/white"
-            android:layout_width="match_parent"/>
 
-        <Button
-            android:layout_height="60dp"
-            android:textSize="22sp"
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="20sp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
             android:id="@+id/btn_addprofile"
-            android:background="#81ECDC"
+            android:background="#ff9b93"
             android:layout_weight="1"
-            android:textColor="@android:color/white"
+            android:textStyle="italic"
+            android:textColor="@android:color/black"
             android:text="Add Profile"
-            android:layout_width="match_parent"/>
+            android:textAllCaps="false"
+            />
 
     </LinearLayout>
 
@@ -81,7 +79,7 @@
             android:layout_width="wrap_content"
             android:text="Mobile :"
             android:textSize="24sp"
-            android:textColor="#3786AA"
+            android:textColor="#fb5757"
             android:layout_marginTop="20dp"
             android:layout_height="wrap_content"/>
         <TextView
@@ -97,7 +95,7 @@
             android:text="Email :"
             android:textSize="24sp"
             android:layout_marginTop="20dp"
-            android:textColor="#3786AA"
+            android:textColor="#fb5757"
             android:layout_height="wrap_content"/>
         <TextView
             android:layout_width="match_parent"
@@ -112,7 +110,7 @@
 
     </LinearLayout>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLogout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -120,12 +118,12 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
-        android:background="@drawable/skyblue_bg"
+        android:background="@drawable/custom_button"
         android:elevation="8dp"
         android:text="Logout"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="#ffffff"
+        android:textColor="#000"
         android:textSize="20sp"
         android:translationZ="8dp" />
 
