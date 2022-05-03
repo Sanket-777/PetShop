@@ -13,10 +13,5 @@
         app:showAsAction="collapseActionView|always"
         app:actionViewClass="android.widget.SearchView"
         android:title="" />
-    <item
-        android:id="@+id/help"
-        android:icon="@drawable/help"
-        app:showAsAction="collapseActionView|always"
-        app:actionViewClass="android.widget.SearchView"
-        android:title="" />
+
 </menu>

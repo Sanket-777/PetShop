@@ -29,6 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".PetDetails"/>
         <activity android:name=".Login" />
         <activity android:name=".Registration" />
         <activity android:name=".Home" >

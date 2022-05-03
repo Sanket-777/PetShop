@@ -114,7 +114,8 @@
 
     <Button
         android:id="@+id/btnLogout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_height="50dp"
         android:layout_below="@id/linearLayout2"
         android:layout_marginLeft="30dp"

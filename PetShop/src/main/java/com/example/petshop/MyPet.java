@@ -190,7 +190,7 @@ public class MyPet extends Fragment {
         public PetAdapterHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
             View view = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.adapter_pet,null );
+                    .inflate(R.layout.adapter_mypet,null );
 
             PetAdapterHolder petAdapterHolder = new PetAdapterHolder(view);
 
@@ -213,57 +213,6 @@ public class MyPet extends Fragment {
             holder.txtCost.setText(petlists.get(position).getPetcost());
             holder.txtUserMobile.setText(petlists.get(position).getUsermobile());
 
-            holder.imgUpdate.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view)
-                {
-//                   Intent i=new Intent(MyPet.this,UpdateActivity.class);
-
-                }
-            });
-
-
-
-            holder.imgDelete.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-
-                    // Setting Dialog Title
-                    alertDialog.setTitle("Confirm Delete...");
-
-                    // Setting Dialog Message
-                    alertDialog.setMessage("Are you sure you want delete this?");
-
-                    // Setting Icon to Dialog
-                    alertDialog.setIcon(R.drawable.ic_action_delete);
-
-                    // Setting Positive "Yes" Button
-                    alertDialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog,int which) {
-
-                            // Write your code here to invoke YES event
-                            deletePet(position);
-                            //   Toast.makeText(getApplicationContext(), "You clicked on YES", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-
-                    // Setting Negative "NO" Button
-                    alertDialog.setNegativeButton("NO", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            // Write your code here to invoke NO event
-                            //  Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
-                            dialog.cancel();
-                        }
-                    });
-
-                    // Showing Alert Message
-                    alertDialog.show();
-
-                }
-            });
-
-
         }
 
         @Override
@@ -271,35 +220,6 @@ public class MyPet extends Fragment {
             return petlists.size();
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     private class PetAdapterHolder extends RecyclerView.ViewHolder {
 
@@ -316,8 +236,7 @@ public class MyPet extends Fragment {
             txtUserMobile = itemView.findViewById(R.id.txtUserMobile);
             cardView = itemView.findViewById(R.id.cardview);
             imagCourse = itemView.findViewById(R.id.pet_image);
-            imgDelete = itemView.findViewById(R.id.imageDelete);
-            imgUpdate= itemView.findViewById(R.id.imageUpdate);
+
 
 
         }
