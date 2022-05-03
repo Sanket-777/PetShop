@@ -129,7 +129,7 @@ public class PetList extends Fragment {
 
                     petlists.addAll(response.body().getPetlist());
 
-                    petAdapter = new PetAdapter(getActivity(),petlists, petAdapter.recyclerViewInterface);
+                    petAdapter = new PetAdapter(getActivity(),petlists);
 
                     // Set the adapter for RecyclerView
                     recPet.setAdapter(petAdapter);
@@ -167,12 +167,6 @@ public class PetList extends Fragment {
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 
-       /* getMenuInflater().inflate(R.menu.search_menu, menu);
-
-        MenuItem search = menu.findItem(R.id.search);
-        SearchView searchView = (SearchView) MenuItemCompat.getActionView(search);
-        search(searchView);
-        return true;*/
 
         inflater.inflate(R.menu.search_menu, menu);
         MenuItem search = menu.findItem(R.id.search);
@@ -202,7 +196,6 @@ public class PetList extends Fragment {
 
     public class PetAdapter extends RecyclerView.Adapter<PetAdapterHolder> implements Filterable {
 
-        private  final RecyclerViewInterface recyclerViewInterface;
         private ArrayList<GetPetPojo.Petlist> petlists;
         private ArrayList<GetPetPojo.Petlist> mFilteredList;
         private ArrayList<GetPetPojo.Petlist> mList;
@@ -210,12 +203,11 @@ public class PetList extends Fragment {
         ProgressDialog progressDialog;
 
 
-        public PetAdapter(Context context, ArrayList<GetPetPojo.Petlist> petlists,RecyclerViewInterface recyclerViewInterface) {
+        public PetAdapter(Context context, ArrayList<GetPetPojo.Petlist> petlists) {
             this.petlists = petlists;
             this.mFilteredList = petlists;
             this.mList = petlists;
             this.context = context;
-            this.recyclerViewInterface = recyclerViewInterface;
         }
 
         @Override
@@ -257,8 +249,7 @@ public class PetList extends Fragment {
 
                 @Override
                 protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
-                    //  mFilteredList = (ArrayList<Dataprovider_customer>) filterResults.values;
-                    //  mFilteredList = albumList;
+
 
                     if (charString.isEmpty()) {
                         petlists = mList;
@@ -304,39 +295,23 @@ public class PetList extends Fragment {
 
 
             holder.txtPetType.setText(petlists.get(position).getPettype());
-            holder.txtPetName.setText(petlists.get(position).getPetname());
             holder.txtCost.setText(petlists.get(position).getPetcost());
-            holder.txtUserMobile.setText(petlists.get(position).getUsermobile());
-            holder.imagUpdate.setVisibility(View.GONE);
-            holder.imageDelete.setVisibility(View.GONE);
-            holder.txtUserMobile.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
-                    if (checkPermission(Manifest.permission.CALL_PHONE)) {
-                        Intent callIntent = new Intent(Intent.ACTION_DIAL);
-                        callIntent.setData(Uri.parse("tel:" + petlists.get(position).getUsermobile()));
-                        startActivity(callIntent);
-
-                    } else {
-                        askForPermission(Manifest.permission.CALL_PHONE, CALL);
-                    }
-
-                }
-            });
-
-           /* holder.cardView.setOnClickListener(new View.OnClickListener() {
+            holder.cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(), StudentCourseDetails.class);
-                    intent.putExtra("courseid", courselists.get(position).getCourseid());
-                    intent.putExtra("fees", courselists.get(position).getFees());
-                    intent.putExtra("by", courselists.get(position).getName());
-                    intent.putExtra("coursename", courselists.get(position).getCoursename());
+                    Toast.makeText(getActivity(), "HELLLLLLLLLLLLLo", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(getActivity(),PetDetails.class);
+                    i.putExtra("PET_NAME",petlists.get(position).getPetname());
+                    i.putExtra("PET_TYPE",petlists.get(position).getPetType());
+                    i.putExtra("PET_COST",petlists.get(position).getPetcost());
+                    i.putExtra("PET_GENDER",petlists.get(position).getPetgender());
+                    i.putExtra("PET_AGE",petlists.get(position).getPetage());
+                    i.putExtra("PET_AVAILIBILTY",petlists.get(position).getExpdate());
+                    i.putExtra("PET_OWNER_NUMBER",petlists.get(position).getUsermobile());
 
-                    startActivity(intent);
+                    startActivity(i);
                 }
-            });*/
+            });
 
 
         }
@@ -350,24 +325,20 @@ public class PetList extends Fragment {
 
     public class PetAdapterHolder extends RecyclerView.ViewHolder {
 
-        TextView txtPetType,txtPetName,txtCost,txtUserMobile;
-        ImageView imagCourse,imagUpdate,imageCart,imageDelete;
+        TextView txtPetType,txtCost;
+        ImageView imagCourse;
         CardView cardView;
 
         public PetAdapterHolder(View itemView) {
             super(itemView);
 
             txtPetType = itemView.findViewById(R.id.txtPetType);
-            txtPetName = itemView.findViewById(R.id.txtName);
-            txtCost = itemView.findViewById(R.id.txtCost);
-            txtUserMobile = itemView.findViewById(R.id.txtUserMobile);
+            txtCost = itemView.findViewById(R.id.txtcost);
             cardView = itemView.findViewById(R.id.cardview);
             imagCourse = itemView.findViewById(R.id.pet_image);
-            imageCart=itemView.findViewById(R.id.imageCart);
-            imageDelete=itemView.findViewById(R.id.imageDelete);
 
 
-            imagUpdate=itemView.findViewById(R.id.imageUpdate);
+
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

@@ -27,7 +27,7 @@ public class Home extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 //        bottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
-        bottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
+      //  bottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
