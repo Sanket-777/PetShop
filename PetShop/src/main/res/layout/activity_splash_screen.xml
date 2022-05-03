@@ -3,27 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
+    android:background="@color/yellow"
 
     android:layout_height="match_parent"
     tools:context=".SplashScreen">
 
-    <ImageView
-        android:id="@+id/home"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:src="@drawable/splash1" />
+    <com.airbnb.lottie.LottieAnimationView
 
-    <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/dog"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/home"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="199dp"
-        android:gravity="center"
-        android:text="Welcome To PetShop"
-        android:textColor="#9800"
-        android:textSize="34sp" />
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:lottie_autoPlay="true"
+        app:lottie_enableMergePathsForKitKatAndAbove="true"
+        app:lottie_fileName="dog_box.json"
+        app:lottie_loop="true"
+        app:lottie_speed="1" />
 
 </RelativeLayout>
