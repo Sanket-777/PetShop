@@ -14,7 +14,7 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_gravity="center"
-        android:background="@color/Black"
+        android:background="@color/black"
         android:layout_margin="10dp"
         app:cardCornerRadius="15dp">
 
@@ -53,9 +53,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="  Name      :"
-                    android:fontFamily=""
-                    android:textColor="@color/Black"
+                    android:text="  Name    :"
+                    android:fontFamily="@font/font10"
+                    android:textColor="@color/black"
                     android:textSize="25dp" />
 
                 <TextView
@@ -63,7 +63,7 @@
                     android:fontFamily="@font/font10"
                     android:layout_height="wrap_content"
                     android:text="  Age            :"
-                    android:textColor="@color/Black"
+                    android:textColor="@color/black"
                     android:textSize="25dp" />
 
                 <TextView
@@ -71,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:text="  Cost          :"
                     android:fontFamily="@font/font10"
-                    android:textColor="@color/Black"
+                    android:textColor="@color/black"
                     android:textSize="25dp" />
 
                 <TextView
@@ -79,7 +79,7 @@
                     android:layout_height="wrap_content"
                     android:text=" Gender    :"
                     android:fontFamily="@font/font10"
-                    android:textColor="@color/Black"
+                    android:textColor="@color/black"
                     android:textSize="25dp" />
 
 
@@ -98,7 +98,7 @@
                     android:layout_height="wrap_content"
                     android:text="Carry"
                     android:fontFamily="@font/font9"
-                    android:textColor="@color/Black"
+                    android:textColor="@color/black"
                     android:textSize="27dp" />
 
                 <TextView
@@ -108,7 +108,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" 18 MOnths"
-                    android:textColor="@color/Black"
+                    android:textColor="@color/black"
                     android:textSize="27dp" />
 
                 <TextView
@@ -118,7 +118,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="8000Rs"
-                    android:textColor="@color/Black"
+                    android:textColor="@color/black"
                     android:textSize="27dp" />
 
                 <TextView
@@ -128,7 +128,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Male"
-                    android:textColor="@color/Black"
+                    android:textColor="@color/black"
                     android:textSize="27dp" />
 
             </LinearLayout>

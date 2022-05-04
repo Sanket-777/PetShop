@@ -10,6 +10,8 @@
         android:id="@+id/cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="10dp"
         android:background="#123"
         android:layout_marginTop="5dp"
         android:layout_marginRight="5dp"
@@ -145,20 +147,18 @@
                     android:layout_marginLeft="5dp"
                     android:id="@+id/txtUserMobile"
                     android:textSize="16sp"
-                    android:textColor="@color/Black"/>
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="8dp"
-                android:layout_below="@+id/linContact"
-                android:gravity="right"
-                android:background="#98fb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/linContact"
+                android:layout_marginTop="8dp"
+                android:background="#98fb"
+                android:gravity="right"
                 android:orientation="horizontal">
-
-
 
 
             </LinearLayout>

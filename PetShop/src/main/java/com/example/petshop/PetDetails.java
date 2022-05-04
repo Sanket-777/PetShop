@@ -32,6 +32,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class PetDetails extends AppCompatActivity {
     TextView petname,petage,petcost,petype,petexpdate,petgender;
     ImageView petimage;
+    GetPetPojo.Petlist pets;
     Button callowner,buypet;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +42,7 @@ public class PetDetails extends AppCompatActivity {
         petage = findViewById(R.id.PET_AGE);
         petcost = findViewById(R.id.PET_COST);
         petgender = findViewById(R.id.PET_GENDER);
-        petimage = findViewById(R.id.pet_image);
+        petimage = findViewById(R.id.PET_IMAGE);
         callowner =findViewById(R.id.call_owner);
 
         Bundle extras;

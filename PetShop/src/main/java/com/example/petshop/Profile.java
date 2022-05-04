@@ -75,13 +75,7 @@ public class Profile extends Fragment {
             }
         });
 
-        btnPetCare.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Intent intent = new Intent(getActivity(), PetCare.class);
-//                startActivity(intent);
-            }
-        });
+
 
         return view;
     }

@@ -1,148 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/frame_container"
-    android:background="@color/bg_app"
+    android:background="@drawable/backgound_profile"
     android:orientation="vertical"
     tools:context=".AddProfile">
 
-    <ScrollView
+    <com.google.android.material.card.MaterialCardView
+        android:layout_marginTop="80dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="500dp"
+        app:cardCornerRadius="40dp"
+        android:backgroundTint="#FFCBC4">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:orientation="vertical">
 
-            <!--            <de.hdodenhof.circleimageview.CircleImageView-->
-            <!--                xmlns:app="http://schemas.android.com/apk/res-auto"-->
-            <!--                android:id="@+id/profile_image"-->
-            <!--                android:layout_width="130dp"-->
-            <!--                android:layout_height="130dp"-->
-            <!--                android:src="@drawable/petshop"-->
-            <!--                app:civ_border_width="1dp"-->
-            <!--                android:layout_marginTop="20dp"-->
-            <!--                android:layout_gravity="center"-->
-            <!--                app:civ_border_color="#FF000000"/>-->
-
-
-            <pl.droidsonroids.gif.GifImageView
-                android:layout_width="169dp"
-                android:layout_height="99dp"
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_margin="5dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/user_gif"
+                android:src="@drawable/profile"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="1dp" />
 
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="38dp"
-                android:layout_marginTop="10dp"
-                android:text="Name"
-                android:textColor="#fb5757"
-                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/edt_name"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp" />
-
-            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="38dp"
-                android:layout_marginTop="10dp"
-                android:text="Email ID"
-                android:textColor="#fb5757"
-                android:textSize="18sp" />
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="Enter Name Here" />
 
             <EditText
                 android:id="@+id/edt_email"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:hint="Enter E-Mail Here"
                 android:inputType="textEmailAddress" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="38dp"
-                android:layout_marginTop="10dp"
-                android:text="Contact Number"
-                android:textColor="#fb5757"
-                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/edt_mobile"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:hint="Enter Mobile Number"
                 android:inputType="number"
                 android:maxLength="10" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="38dp"
-                android:layout_marginTop="10dp"
-                android:text="Address"
-                android:textColor="#fb5757"
-                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/edt_address"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp" />
+                android:layout_marginRight="10dp"
+                android:hint="Enter Address" />
 
-            <TextView
-                android:layout_width="match_parent"
-
-                android:layout_height="match_parent"
-                android:layout_marginLeft="38dp"
-                android:layout_marginTop="10dp"
-                android:text="City"
-                android:textColor="#fb5757"
-                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/edt_city"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_profile"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="25dp"
-                android:layout_marginBottom="25dp"
-                android:background="@drawable/custom_button"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="Enter City" />
+
+            <Button
+                android:id="@+id/btn_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/black_bg"
                 android:text="Save"
                 android:textAllCaps="false"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
         </LinearLayout>
-
-    </ScrollView>
-
-</RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
